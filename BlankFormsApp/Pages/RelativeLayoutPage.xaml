@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BlankFormsApp.Pages.RelativeLayoutPage">
+    <RelativeLayout>
+        <BoxView
+            WidthRequest="100"
+            HeightRequest="200"
+            Color="DarkOrange"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=0, 
+                Constant=0}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0,
+                Constant=0}" />
+        <BoxView
+            WidthRequest="100"
+            HeightRequest="200"
+            Color="Blue"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=1, 
+                Constant=-100}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0,
+                Constant=0}" />
+        <Label Text="Relative regarding center box"
+               BackgroundColor="Aquamarine"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=centerBox,
+             Property=X, Factor=1, Constant=0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=centerBox, 
+              Property=Y, Factor=1, Constant=-30}"
+               RelativeLayout.HeightConstraint="20" />
+        <BoxView
+            x:Name="centerBox"
+            WidthRequest="100"
+            HeightRequest="200"
+            Color="Red"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=0.5, 
+                Constant=-50}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.5,
+                Constant=-100}" />
+        <BoxView
+            WidthRequest="100"
+            HeightRequest="200"
+            Color="DarkGreen"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=0, 
+                Constant=0}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=1,
+                Constant=-200}" />
+        <BoxView
+            WidthRequest="100"
+            HeightRequest="200"
+            Color="DarkGoldenrod"
+            RelativeLayout.XConstraint="{ConstraintExpression 
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=1, 
+                Constant=-100}"
+            RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=1,
+                Constant=-200}" />
+    </RelativeLayout>
+</ContentPage>
