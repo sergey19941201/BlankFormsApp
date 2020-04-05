@@ -21,8 +21,8 @@ namespace BlankFormsApp
             // MainPage = new RelativeLayoutPage();
             //MainPage = new GridPage();
             //MainPage = new TableViewPage();
-            MainPage = new WebViewPage();
-            //MainPage = new ();
+            //MainPage = new WebViewPage();
+            MainPage = new AlertsPage();
             //MainPage = new ();
             //MainPage = new ();
             //MainPage = new ();
