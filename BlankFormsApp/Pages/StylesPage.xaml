@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankFormsApp.Pages.StylesPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                <Thickness Top="20" />
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="styled" Style="{StaticResource appButtonStyle}" />
+            <Button Text="styled with text color overriden" Style="{StaticResource appButtonStyle}" TextColor="White" />
+            <Button Text="styled using styles inheritance" Style="{StaticResource inheritedButtonStyle}" TextColor="White" />
+            <Button Text="not styled" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
