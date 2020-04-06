@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankFormsApp.Pages.TriggerPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                <Thickness Top="20" />
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout>
+        <Entry FontSize="Large" Text = "Regular triggered entry" Placeholder="Regular triggered entry"  />
+        <Entry FontSize="Large" Text = "Regular triggered entry" Placeholder="Regular triggered entry" />
+        <Entry FontSize="Large" Text = "Regular triggered entry" Placeholder="Regular triggered entry"  />
+        <Entry FontSize="Large" Placeholder="Numeric validation triggered entry" Style="{StaticResource appEntryNumericStyle}" />
+    </StackLayout>
+</ContentPage>

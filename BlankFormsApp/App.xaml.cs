@@ -26,9 +26,9 @@ namespace BlankFormsApp
             //MainPage = new OnPlatformInXamlPage();
             // MainPage = new DeviceInfoPage();
             //MainPage = new ResourcesPage();
-            MainPage = new StylesPage();
-            //MainPage = new 
-            //MainPage = new 
+            // MainPage = new StylesPage();
+            // MainPage = new TriggerPage();
+            MainPage = new VisualStateManagerPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
