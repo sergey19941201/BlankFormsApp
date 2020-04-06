@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankFormsApp.Pages.OnPlatformInXamlPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                <Thickness Left="50" Top="20" Right="50" Bottom="30" />
+            </OnPlatform.iOS>
+            <OnPlatform.Android>
+                <Thickness Left="10" Top="10" Right="10" Bottom="10" />
+            </OnPlatform.Android>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Blue">
+            <Label VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand">
+                <Label.Text>
+                    <OnPlatform x:TypeArguments="x:String"
+                                iOS="iOS"
+                                Android="Android" />
+                </Label.Text>
+                <Label.TextColor>
+                    <OnPlatform x:TypeArguments="Color"
+                                iOS="Red"
+                                Android="Green" />
+                </Label.TextColor>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

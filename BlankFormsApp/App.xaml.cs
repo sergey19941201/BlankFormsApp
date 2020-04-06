@@ -22,9 +22,9 @@ namespace BlankFormsApp
             //MainPage = new GridPage();
             //MainPage = new TableViewPage();
             //MainPage = new WebViewPage();
-            MainPage = new AlertsPage();
-            //MainPage = new ();
-            //MainPage = new ();
+            // MainPage = new AlertsPage();
+            MainPage = new OnPlatformInXamlPage();
+            // MainPage = new ();
             //MainPage = new ();
             //MainPage = new ();
             //MainPage = new ();
