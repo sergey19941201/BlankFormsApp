@@ -23,8 +23,8 @@ namespace BlankFormsApp
             //MainPage = new TableViewPage();
             //MainPage = new WebViewPage();
             // MainPage = new AlertsPage();
-            MainPage = new OnPlatformInXamlPage();
-            // MainPage = new ();
+            //MainPage = new OnPlatformInXamlPage();
+            MainPage = new DeviceInfoPage();
             //MainPage = new ();
             //MainPage = new ();
             //MainPage = new ();
