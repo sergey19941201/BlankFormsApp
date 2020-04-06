@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankFormsApp.Pages.ResourcesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Hello, world!"
+                   TextColor="{StaticResource Key=appTextColor}"
+                   FontSize="{StaticResource Key=appFontSize}"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
+            <Button Text="Изменить" Clicked="ColorChange" TextColor="{DynamicResource Key=appButtonTextColor}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
