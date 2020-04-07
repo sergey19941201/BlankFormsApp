@@ -30,8 +30,8 @@ namespace BlankFormsApp
             // MainPage = new TriggerPage();
             // MainPage = new VisualStateManagerPage();
             //MainPage = new BindingPage(); 
-            MainPage = new ConverterPage();
-            //MainPage = new 
+            // MainPage = new ConverterPage();
+            MainPage = new BindingToCustomEntityWithINotifyPropertyChangedPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
