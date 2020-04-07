@@ -14,7 +14,8 @@
         <ListView x:Name="phonesList"
                   HasUnevenRows="True"
                   ItemsSource="{Binding PhoneGroups}"
-                  IsGroupingEnabled="True">
+                  IsGroupingEnabled="True"
+                  CachingStrategy="RecycleElement">
             <ListView.GroupHeaderTemplate>
                 <DataTemplate>
                     <ViewCell Height="30">
