@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankFormsApp.Pages.BindingPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                <Thickness Top="20" />
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="label"
+                   BindingContext="{x:Reference Name=entryBox}"
+                   Text="{Binding Path=Text}"
+                   FontSize="Large" />
+            <Entry x:Name="entryBox" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
