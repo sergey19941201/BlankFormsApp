@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cells="clr-namespace:BlankFormsApp.Cells;assembly=BlankFormsApp"
+             x:Class="BlankFormsApp.Pages.ListViewCustomReusableViewCellPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                <Thickness Top="20" />
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout>
+        <Label Text="{Binding Source={x:Reference Name=phonesList}, Path=SelectedItem.Title}"
+               FontSize="Large" />
+        <ListView x:Name="phonesList"
+                  HasUnevenRows="True"
+                  ItemsSource="{Binding Phones}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <cells:CustomCell
+                        ImagePath="{Binding ImagePath}"
+                        ImageWidth="45"
+                        ImageHeight="60"
+                        Title="{Binding Title}"
+                        Detail="{Binding Company, StringFormat='Флагман компании {0}'}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
