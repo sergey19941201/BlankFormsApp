@@ -13,6 +13,7 @@
     </ContentPage.Padding>
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="Binding context approach:" FontSize="Large" TextColor="Red" />
             <Label x:Name="label"
                    BindingContext="{x:Reference Name=entryBox}"
                    Text="{Binding Path=Text}"
@@ -20,15 +21,24 @@
             <Entry x:Name="entryBox" />
             <Label Text="Custom binding Tag:" FontSize="Large" />
             <controls:TagLabel x:Name="tagLabel"
-                            BindingContext="{x:Reference Name=entryBoxForCustomBinding}"
-                            Text="{Binding Path=Text}"
-                            Tag="{Binding Path=Text}"
-                            FontSize="Large" />
+                               BindingContext="{x:Reference Name=entryBoxForCustomBinding}"
+                               Text="{Binding Path=Text}"
+                               Tag="{Binding Path=Text}"
+                               FontSize="Large" />
             <Entry x:Name="entryBoxForCustomBinding"
-                   Placeholder="EntryBox for custom binding"/>
+                   Placeholder="EntryBox for custom binding" />
             <Label BindingContext="{x:Reference Name=tagLabel}"
                    Text="{Binding Path=Tag}"
                    FontSize="Large" />
+            <Label Text="Binding approach:" FontSize="Large" TextColor="Red" />
+            <Label FontSize="Large" Text="{Binding Source={x:Reference Name=bindingApproachEntry}, Path=Text}" />
+            <Entry x:Name="bindingApproachEntry" />
+            <Label Text="String.Format:" FontSize="Large" />
+            <Label FontSize="Large"
+                   Text="{Binding Source={x:Reference Name=Slider}, 
+                                           Path=Value, 
+                                           StringFormat='Установлено: {0}'}" />
+            <Slider x:Name="Slider" Minimum="0" Maximum="50" Value="30" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
