@@ -36,8 +36,8 @@ namespace BlankFormsApp
             // MainPage = new ListViewC_BindingPage();
             // MainPage = new ListViewCustomViewCellPage();
             //MainPage = new ListViewImageCellPage();
-            MainPage = new ListViewCustomReusableViewCellPage();
-            //MainPage = new 
+            // MainPage = new ListViewCustomReusableViewCellPage();
+            MainPage = new ListViewObservableCollectionPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
