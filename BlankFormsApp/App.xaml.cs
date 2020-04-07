@@ -29,8 +29,8 @@ namespace BlankFormsApp
             // MainPage = new StylesPage();
             // MainPage = new TriggerPage();
             // MainPage = new VisualStateManagerPage();
-            MainPage = new BindingPage(); 
-            //MainPage = new 
+            //MainPage = new BindingPage(); 
+            MainPage = new ConverterPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
