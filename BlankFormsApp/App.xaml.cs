@@ -34,8 +34,8 @@ namespace BlankFormsApp
             //MainPage = new BindingToCustomEntityWithINotifyPropertyChangedPage();
             //MainPage = new ListViewStaticInXamlPage();
             // MainPage = new ListViewC_BindingPage();
-            MainPage = new ListViewCustomViewCellPage();
-            //MainPage = new 
+            // MainPage = new ListViewCustomViewCellPage();
+            MainPage = new ListViewImageCellPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 

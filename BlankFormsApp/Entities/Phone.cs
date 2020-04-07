@@ -44,5 +44,7 @@ namespace BlankFormsApp.Entities
                 }
             }
         }
+        
+        public string ImagePath { get; set; }
     }
 }
