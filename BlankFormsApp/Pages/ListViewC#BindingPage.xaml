@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankFormsApp.Pages.ListViewC_BindingPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                <Thickness Top="20" />
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout>
+        <Label Text="{Binding Source={x:Reference Name=phonesList}, Path=SelectedItem}" HorizontalOptions="Center" FontSize="Large" />
+        <ListView x:Name="phonesList" ItemsSource="{Binding Phones}"  ItemSelected="phonesList_ItemSelected" ItemTapped="PhonesList_ItemTapped"/>
+    </StackLayout>
+</ContentPage>
