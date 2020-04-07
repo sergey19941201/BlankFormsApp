@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:entities="clr-namespace:BlankFormsApp.Entities;assembly=BlankFormsApp"
+             x:Class="BlankFormsApp.Pages.DataTriggersPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                <Thickness Top="20" />
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <entities:Phone x:Key="phone" Title="iPhone 7" Company="Apple" Price="56000" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Grid BindingContext="{StaticResource phone}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="Модель" />
+            <Label Grid.Row="2" Text="Компания" />
+            <Label Grid.Row="4" Text="Цена" />
+
+            <Entry Grid.Row="1" Text="{Binding Path=Title}" />
+            <Entry Grid.Row="3" Text="{Binding Path=Company}">
+                <Entry.Triggers>
+                    <DataTrigger Binding="{Binding Company}" TargetType="Entry" Value="Microsoft">
+
+                        <Setter Property="TextColor" Value="#004D40" />
+                        <Setter Property="BackgroundColor" Value="#80CBC4" />
+
+                    </DataTrigger>
+                </Entry.Triggers>
+            </Entry>
+            <Entry Grid.Row="5" Text="{Binding Path=Price}" />
+        </Grid>
+        <ListView HasUnevenRows="True" ItemsSource="{Binding Phones}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Title}" FontSize="Medium">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label"
+                                                 Binding="{Binding Company}" Value="Apple">
+                                        <Setter Property="TextColor" Value="Red" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                            <Label Text="{Binding Price}">
+                                <Label.Triggers>
+                                    <DataTrigger TargetType="Label"
+                                                 Binding="{Binding Company}" Value="Apple">
+                                        <Setter Property="TextColor" Value="Red" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
