@@ -2,6 +2,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:BlankFormsApp.Controls;assembly=BlankFormsApp"
              x:Class="BlankFormsApp.Pages.BindingPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -17,6 +18,17 @@
                    Text="{Binding Path=Text}"
                    FontSize="Large" />
             <Entry x:Name="entryBox" />
+            <Label Text="Custom binding Tag:" FontSize="Large" />
+            <controls:TagLabel x:Name="tagLabel"
+                            BindingContext="{x:Reference Name=entryBoxForCustomBinding}"
+                            Text="{Binding Path=Text}"
+                            Tag="{Binding Path=Text}"
+                            FontSize="Large" />
+            <Entry x:Name="entryBoxForCustomBinding"
+                   Placeholder="EntryBox for custom binding"/>
+            <Label BindingContext="{x:Reference Name=tagLabel}"
+                   Text="{Binding Path=Tag}"
+                   FontSize="Large" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
