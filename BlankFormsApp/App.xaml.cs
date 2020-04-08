@@ -40,8 +40,8 @@ namespace BlankFormsApp
             // MainPage = new ListViewObservableCollectionPage();
             // MainPage = new ListViewGroupingPage();
             // MainPage = new DataTriggersPage(); 
-            MainPage = new NavigationPage(new NavigationMainPage());
-            //MainPage = new 
+            // MainPage = new NavigationPage(new NavigationMainPage());
+            MainPage = new NavigationPage(new MessageMainPage());
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
