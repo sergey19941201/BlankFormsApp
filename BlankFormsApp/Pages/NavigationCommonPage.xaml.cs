@@ -15,10 +15,31 @@ namespace BlankFormsApp.Pages
         {
             InitializeComponent();
         }
+        
+        // Переход вперед на Page3
+        private async void GoToForward(object sender, EventArgs e)
+        {
+            NavigationCommon2Page page = new NavigationCommon2Page();
+            await Navigation.PushAsync(page);
+            page.DisplayStack();
+        }
 
         private async void BackButton_Click(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
+            
+            NavigationPage navPage = (NavigationPage)App.Current.MainPage;
+            ((NavigationMainPage)navPage.CurrentPage).DisplayStack();
+        }
+        
+        protected internal void DisplayStack()
+        {
+            NavigationPage navPage = (NavigationPage)App.Current.MainPage;
+            StackLabel.Text = "";
+            foreach (Page p in navPage.Navigation.NavigationStack)
+            {
+                StackLabel.Text += p.Title + "\n";
+            }
         }
     }
 }
