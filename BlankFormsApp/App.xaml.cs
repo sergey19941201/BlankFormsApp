@@ -43,8 +43,8 @@ namespace BlankFormsApp
             // MainPage = new NavigationPage(new NavigationMainPage());
             //MainPage = new NavigationPage(new MessageMainPage());
             //MainPage = new TabbedMainPage();
-            MainPage = new PropertiesPage();
-            //MainPage = new 
+            // MainPage = new PropertiesPage();
+            MainPage = new FilesPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
