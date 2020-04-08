@@ -9,6 +9,7 @@
             <Button Text="Forward" Clicked="GoToForward" />
             <Button Text="Back" Clicked="BackButton_Click" />
             <Label x:Name="StackLabel"/>
+            <Label x:Name="DataFromAnotherPageLabel"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
