@@ -14,5 +14,9 @@
         <Label Text="{Binding Title}" FontSize="Medium" />
         <Label Text="{Binding Company}" FontSize="Medium" />
         <Label Text="{Binding Price}" FontSize="Medium" />
+        <!--Button with custom Command-->
+        <Button Text="+" Command="{Binding Increase}" />
+        <!--Button with built-in Command-->
+        <Button Text="-" Command="{Binding Decrease}" />
     </StackLayout>
 </ContentPage>

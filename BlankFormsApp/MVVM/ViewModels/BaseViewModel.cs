@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace BlankFormsApp.ViewModels
+namespace BlankFormsApp.MVVM.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
