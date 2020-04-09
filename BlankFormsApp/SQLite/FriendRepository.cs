@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using BlankFormsApp.SQLite.Tables;
 using SQLite;
 
 namespace BlankFormsApp.SQLite
 {
+    [Obsolete]
     public class FriendRepository
     {
         SQLiteConnection database;

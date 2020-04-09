@@ -22,14 +22,14 @@ namespace BlankFormsApp.Pages
             var friend = (Friend)BindingContext;
             if (!String.IsNullOrEmpty(friend.Name))
             {
-                App.Database.SaveItem(friend);
+                App.Database.SaveItemAsync(friend);
             }
             this.Navigation.PopAsync();
         }
         private void DeleteFriend(object sender, EventArgs e)
         {
             var friend = (Friend)BindingContext;
-            App.Database.DeleteItem(friend.Id);
+            App.Database.DeleteItemAsync(friend);
             this.Navigation.PopAsync();
         }
         private void Cancel(object sender, EventArgs e)

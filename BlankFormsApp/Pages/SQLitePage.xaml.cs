@@ -17,9 +17,13 @@ namespace BlankFormsApp.Pages
             InitializeComponent();
         }
         
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
-            friendsList.ItemsSource = App.Database.GetItems();
+            // создание таблицы, если ее нет
+            await App.Database.CreateTable();
+            // привязка данных
+            friendsList.ItemsSource = await App.Database.GetItemsAsync();
+            
             base.OnAppearing();
         }
         // обработка нажатия элемента в списке

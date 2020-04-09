@@ -10,15 +10,17 @@ namespace BlankFormsApp
     public partial class App : Application
     {
         public const string DATABASE_NAME = "friends.db";
-        public static FriendRepository database;
+        // Synchronous Repo
+        //public static FriendRepository database;
+        public static FriendAsyncRepository database;
 
-        public static FriendRepository Database
+        public static FriendAsyncRepository Database
         {
             get
             {
                 if (database == null)
                 {
-                    database = new FriendRepository(
+                    database = new FriendAsyncRepository(
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
                 }
