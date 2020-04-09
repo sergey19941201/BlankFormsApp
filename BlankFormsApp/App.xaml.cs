@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using BlankFormsApp.Pages;
+using BlankFormsApp.SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,6 +9,24 @@ namespace BlankFormsApp
 {
     public partial class App : Application
     {
+        public const string DATABASE_NAME = "friends.db";
+        public static FriendRepository database;
+
+        public static FriendRepository Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new FriendRepository(
+                        Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
+                }
+
+                return database;
+            }
+        }
+
         public App()
         {
             InitializeComponent();
@@ -47,8 +67,8 @@ namespace BlankFormsApp
             // MainPage = new FilesPage();
             // MainPage = new MVVMPage();
             //MainPage = new NavigationPage(new MVVMFriendsListPage());
-            MainPage = new MVVMContextActionsPhonesListPage();
-            //MainPage = new 
+            //MainPage = new MVVMContextActionsPhonesListPage();
+            MainPage = new NavigationPage(new SQLitePage());
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
