@@ -17,24 +17,24 @@ namespace BlankFormsApp.Pages
             InitializeComponent();
         }
         
-        private void SaveFriend(object sender, EventArgs e)
+        private async void SaveFriend(object sender, EventArgs e)
         {
             var friend = (Friend)BindingContext;
             if (!String.IsNullOrEmpty(friend.Name))
             {
-                App.Database.SaveItemAsync(friend);
+                await App.Database.SaveItemAsync(friend);
             }
-            this.Navigation.PopAsync();
+            await this.Navigation.PopAsync();
         }
-        private void DeleteFriend(object sender, EventArgs e)
+        private async void DeleteFriend(object sender, EventArgs e)
         {
             var friend = (Friend)BindingContext;
-            App.Database.DeleteItemAsync(friend);
-            this.Navigation.PopAsync();
+            await App.Database.DeleteItemAsync(friend);
+            await this.Navigation.PopAsync();
         }
-        private void Cancel(object sender, EventArgs e)
+        private async void Cancel(object sender, EventArgs e)
         {
-            this.Navigation.PopAsync();
+            await this.Navigation.PopAsync();
         }
     }
 }
