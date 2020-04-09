@@ -45,8 +45,8 @@ namespace BlankFormsApp
             //MainPage = new TabbedMainPage();
             // MainPage = new PropertiesPage();
             // MainPage = new FilesPage();
-            MainPage = new MVVMPage();
-            //MainPage = new 
+            // MainPage = new MVVMPage();
+            MainPage = new NavigationPage(new MVVMFriendsListPage());
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
