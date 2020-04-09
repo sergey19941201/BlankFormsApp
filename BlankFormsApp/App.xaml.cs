@@ -46,8 +46,8 @@ namespace BlankFormsApp
             // MainPage = new PropertiesPage();
             // MainPage = new FilesPage();
             // MainPage = new MVVMPage();
-            MainPage = new NavigationPage(new MVVMFriendsListPage());
-            //MainPage = new 
+            //MainPage = new NavigationPage(new MVVMFriendsListPage());
+            MainPage = new MVVMContextActionsPhonesListPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
