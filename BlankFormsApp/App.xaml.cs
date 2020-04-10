@@ -77,8 +77,8 @@ namespace BlankFormsApp
             //MainPage = new MVVMContextActionsPhonesListPage();
             // MainPage = new NavigationPage(new SQLitePage());
             //MainPage = new LocalizationPage();
-            MainPage = new InternetConnectivity();
-            //MainPage = new 
+            // MainPage = new InternetConnectivity();
+            MainPage = new InternetGetDataFromServer();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
