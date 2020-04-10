@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using BlankFormsApp.Interfaces;
+using BlankFormsApp.Localization;
 using BlankFormsApp.Pages;
 using BlankFormsApp.SQLite;
 using Xamarin.Forms;
@@ -10,6 +12,7 @@ namespace BlankFormsApp
     public partial class App : Application
     {
         public const string DATABASE_NAME = "friends.db";
+
         // Synchronous Repo
         //public static FriendRepository database;
         public static FriendAsyncRepository database;
@@ -32,6 +35,8 @@ namespace BlankFormsApp
         public App()
         {
             InitializeComponent();
+            // Uncomment if English by default is needed 
+            //SetEnglishCultureAsDefault();
 
             // MainPage = new MainPage();
             //MainPage = new StartPage();
@@ -146,6 +151,12 @@ namespace BlankFormsApp
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
+        }
+
+        private void SetEnglishCultureAsDefault()
+        {
+            AppResources.Culture = DependencyService.Get<ILocalize>()
+                .GetCurrentCultureInfo();
         }
 
         protected override void OnStart()

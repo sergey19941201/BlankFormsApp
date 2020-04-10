@@ -60,6 +60,7 @@
     <Compile Include="Dependencies\BaseUrl_Android.cs" />
     <Compile Include="Dependencies\DeviceInfo.cs" />
     <Compile Include="Dependencies\FileWorker.cs" />
+    <Compile Include="Dependencies\Localize.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

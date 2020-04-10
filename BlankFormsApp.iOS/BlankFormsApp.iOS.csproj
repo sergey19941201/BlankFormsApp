@@ -66,6 +66,7 @@
     <Compile Include="Dependencies\BaseUrl_iOS.cs" />
     <Compile Include="Dependencies\DeviceInfo.cs" />
     <Compile Include="Dependencies\FileWorker.cs" />
+    <Compile Include="Dependencies\Localize.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
