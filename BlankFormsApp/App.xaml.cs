@@ -78,8 +78,8 @@ namespace BlankFormsApp
             // MainPage = new NavigationPage(new SQLitePage());
             //MainPage = new LocalizationPage();
             // MainPage = new InternetConnectivity();
-            MainPage = new InternetGetDataFromServer();
-            //MainPage = new 
+            // MainPage = new InternetGetDataFromServer();
+            MainPage = new ReusableViewPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 

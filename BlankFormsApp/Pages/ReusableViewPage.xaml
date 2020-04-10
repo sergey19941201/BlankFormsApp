@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BlankFormsApp.Views;assembly=BlankFormsApp"
+             x:Class="BlankFormsApp.Pages.ReusableViewPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                <Thickness Top="20" />
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout>
+        <local:SearchPlugin Search="SearchUsers"></local:SearchPlugin>
+        <ListView x:Name="usersList" />
+    </StackLayout>
+</ContentPage>
