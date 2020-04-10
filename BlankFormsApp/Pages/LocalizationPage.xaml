@@ -2,7 +2,8 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BlankFormsApp.Pages.LocalizationPage">
+             x:Class="BlankFormsApp.Pages.LocalizationPage"
+             xmlns:local="clr-namespace:BlankFormsApp.MarkupExtensions;assembly=BlankFormsApp">
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="MyLabel"
@@ -14,6 +15,9 @@
             <Button x:Name="MyButton"
                     VerticalOptions="CenterAndExpand"
                     HorizontalOptions="CenterAndExpand" />
+            <Label Text="{local:Translate FromXamlLocalization}"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -63,5 +63,11 @@ namespace BlankFormsApp.Localization {
                 return ResourceManager.GetString("Save", resourceCulture);
             }
         }
+        
+        public static string FromXamlLocalization {
+            get {
+                return ResourceManager.GetString("FromXamlLocalization", resourceCulture);
+            }
+        }
     }
 }

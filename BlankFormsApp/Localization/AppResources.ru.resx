@@ -131,4 +131,7 @@
     <data name="Save" xml:space="preserve">
     <value>Сохранить</value>
   </data>
+    <data name="FromXamlLocalization" xml:space="preserve">
+    <value>С XAML локализации</value>
+  </data>
 </root>
