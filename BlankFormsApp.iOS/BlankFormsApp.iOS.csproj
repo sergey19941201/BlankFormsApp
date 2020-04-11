@@ -69,6 +69,7 @@
     <Compile Include="Dependencies\Localize.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\CustomButtonRenderer.cs" />
     <Compile Include="Renderers\HeaderViewRenderer.cs" />
     <Compile Include="Renderers\TextSizedLabelRenderer.cs" />
     <None Include="Entitlements.plist" />

@@ -34,5 +34,10 @@ namespace BlankFormsApp.Pages
             HeaderView hView = sender as HeaderView;
             hView.Text = $"{++clicks} clicks";
         }
+        
+        private void ButtonClicked(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -22,5 +22,11 @@
             TextColor="Blue"
             MyTextSize="12" 
             HeightRequest="200"/>
+        <local:CustomButton  
+            Text="Custom Button" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Center"
+            Clicked="ButtonClicked">
+        </local:CustomButton>
     </StackLayout>
 </ContentPage>
