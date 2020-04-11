@@ -6,17 +6,19 @@
              xmlns:local="clr-namespace:BlankFormsApp.Views;assembly=BlankFormsApp">
     <StackLayout>
         <local:HeaderView
-            Text="Simple HeaderView"
             x:Name="SimpleHeaderView"
+            TappedOrClickEvent="ChangeText"
+            Text="Simple HeaderView"
             HeightRequest="200" />
         <local:HeaderView
-            Text="Colored HeaderView"
             x:Name="ColoredHeaderView"
+            TappedOrClickEvent="ChangeText"
+            Text="Colored HeaderView"
             TextColor="Red" 
             HeightRequest="200"/>
         <local:TextSizedLabel
-            Text="my text sized label"
             x:Name="MyTextSizedLabel"
+            Text="my text sized label"
             TextColor="Blue"
             MyTextSize="12" 
             HeightRequest="200"/>

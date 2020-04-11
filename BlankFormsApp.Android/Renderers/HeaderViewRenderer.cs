@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -30,16 +31,25 @@ namespace BlankFormsApp.Droid.Renderers
                 textView.SetTextSize(ComplexUnitType.Dip, 28);
                 textView.SetPadding(30, 30, 30, 30);
 
+                textView.Click -= TextView_Click;
+                textView.Click += TextView_Click;
+
                 // устанавливаем элемент для класса из Portable-проекта
                 SetNativeControl(textView);
             }
-            
+
             // установка свойств
             if (args.NewElement != null)
             {
                 SetText();
                 SetTextColor();
             }
+        }
+
+        private void TextView_Click(object sender, EventArgs e)
+        {
+            if (Element != null)
+                Element.FireClick(System.EventArgs.Empty);
         }
 
         // изменения свойства

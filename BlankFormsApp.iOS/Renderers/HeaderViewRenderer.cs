@@ -10,6 +10,7 @@ namespace BlankFormsApp.iOS.Renderers
 {
     public class HeaderViewRenderer : ViewRenderer<HeaderView, UILabel>
     {
+        UITapGestureRecognizer tapGestureRecognizer;
         protected override void OnElementChanged(ElementChangedEventArgs<HeaderView> args)
         {
             base.OnElementChanged(args);
@@ -29,6 +30,11 @@ namespace BlankFormsApp.iOS.Renderers
                     TextColor = iosColor,
                     Font = UIFont.SystemFontOfSize(25)
                 };
+                
+                tapGestureRecognizer = new UITapGestureRecognizer(OnHeaderViewTapped);
+                uilabel.AddGestureRecognizer(tapGestureRecognizer);
+                uilabel.UserInteractionEnabled = true;
+                
                 SetNativeControl(uilabel);
             }
             
@@ -36,6 +42,14 @@ namespace BlankFormsApp.iOS.Renderers
             {
                 SetText();
                 SetTextColor();
+            }
+        }
+ 
+        private void OnHeaderViewTapped()
+        {
+            if(Element!=null)
+            {
+                Element.FireClick(System.EventArgs.Empty);
             }
         }
         

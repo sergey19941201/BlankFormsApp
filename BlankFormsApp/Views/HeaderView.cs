@@ -1,9 +1,17 @@
+using System;
 using Xamarin.Forms;
 
 namespace BlankFormsApp.Views
 {
     public class HeaderView : View
     {
+        public event EventHandler TappedOrClickEvent;
+        public void FireClick(EventArgs e)
+        {
+            if (this.TappedOrClickEvent != null)
+                this.TappedOrClickEvent(this, e);
+        }
+        
         public static readonly BindableProperty TextProperty =
             BindableProperty.Create("Text", typeof(string), typeof(HeaderView), string.Empty);
 
