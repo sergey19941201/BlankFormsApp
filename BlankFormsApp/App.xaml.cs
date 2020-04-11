@@ -79,8 +79,8 @@ namespace BlankFormsApp
             //MainPage = new LocalizationPage();
             // MainPage = new InternetConnectivity();
             // MainPage = new InternetGetDataFromServer();
-            MainPage = new ReusableViewPage();
-            //MainPage = new 
+            //MainPage = new ReusableViewPage();
+            MainPage = new CustomRendererPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
