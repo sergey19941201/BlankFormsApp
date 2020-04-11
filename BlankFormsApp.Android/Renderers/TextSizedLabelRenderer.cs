@@ -6,13 +6,13 @@ using Android.Widget;
 using BlankFormsApp.Views;
 using BlankFormsApp.Droid.Renderers;
 
-[assembly: ExportRenderer(typeof(HeaderView), typeof(HeaderViewRenderer))]
+[assembly: ExportRenderer(typeof(TextSizedLabel), typeof(TextSizedLabelRenderer))]
 
 namespace BlankFormsApp.Droid.Renderers
 {
-    public class HeaderViewRenderer : ViewRenderer<HeaderView, TextView>
+    public class TextSizedLabelRenderer : ViewRenderer<TextSizedLabel, TextView>
     {
-        protected override void OnElementChanged(ElementChangedEventArgs<HeaderView> args)
+        protected override void OnElementChanged(ElementChangedEventArgs<TextSizedLabel> args)
         {
             base.OnElementChanged(args);
             if (Control == null)
@@ -27,18 +27,14 @@ namespace BlankFormsApp.Droid.Renderers
                     (byte) (color.B * 255));
                 textView.SetTextColor(andrColor);
                 textView.Text = Element.Text;
-                textView.SetTextSize(ComplexUnitType.Dip, 28);
-                textView.SetPadding(30, 30, 30, 30);
-
                 // устанавливаем элемент для класса из Portable-проекта
                 SetNativeControl(textView);
             }
-            
+
             // установка свойств
             if (args.NewElement != null)
             {
-                SetText();
-                SetTextColor();
+                SetTextSize();
             }
         }
 
@@ -47,36 +43,15 @@ namespace BlankFormsApp.Droid.Renderers
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (e.PropertyName == HeaderView.TextColorProperty.PropertyName)
+            if (e.PropertyName == TextSizedLabel.MyTextSizeProperty.PropertyName)
             {
-                SetTextColor();
-            }
-            else if (e.PropertyName == HeaderView.TextProperty.PropertyName)
-            {
-                SetText();
+                SetTextSize();
             }
         }
 
-        private void SetText()
+        private void SetTextSize()
         {
-            Control.Text = $"{Element.Text} {Control.Text} из рендерера";
-        }
-
-        private void SetTextColor()
-        {
-            Android.Graphics.Color andrColor = Android.Graphics.Color.Gray;
-
-            if (Element.TextColor != Xamarin.Forms.Color.Default)
-            {
-                Xamarin.Forms.Color color = Element.TextColor;
-                andrColor = Android.Graphics.Color.Argb(
-                    (byte) (color.A * 255),
-                    (byte) (color.R * 255),
-                    (byte) (color.G * 255),
-                    (byte) (color.B * 255));
-            }
-
-            Control.SetTextColor(andrColor);
+            Control.SetTextSize(ComplexUnitType.Dip, Element.MyTextSize);
         }
     }
 }
