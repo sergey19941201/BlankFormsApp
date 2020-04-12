@@ -146,5 +146,6 @@
   <ItemGroup>
     <BundleResource Include="Resources\gorilla.png" />
     <BundleResource Include="Resources\index.html" />
+    <BundleResource Include="Resources\monkey_circle.png" />
   </ItemGroup>
 </Project>

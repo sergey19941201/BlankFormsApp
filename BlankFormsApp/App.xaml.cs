@@ -61,7 +61,7 @@ namespace BlankFormsApp
             //MainPage = new BindingToCustomEntityWithINotifyPropertyChangedPage();
             //MainPage = new ListViewStaticInXamlPage();
             // MainPage = new ListViewC_BindingPage();
-            // MainPage = new ListViewCustomViewCellPage();
+             //MainPage = new ListViewCustomViewCellPage();
             //MainPage = new ListViewImageCellPage();
             // MainPage = new ListViewCustomReusableViewCellPage();
             // MainPage = new ListViewObservableCollectionPage();
@@ -82,8 +82,8 @@ namespace BlankFormsApp
             //MainPage = new ReusableViewPage();
             //MainPage = new CustomRendererPage();
             // MainPage = new CameraPage();
-            MainPage = new PhoneCallPage();
-            //MainPage = new 
+            // MainPage = new PhoneCallPage();
+            MainPage = new AnimationEyeTrainingPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
