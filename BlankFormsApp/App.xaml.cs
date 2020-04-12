@@ -81,8 +81,8 @@ namespace BlankFormsApp
             // MainPage = new InternetGetDataFromServer();
             //MainPage = new ReusableViewPage();
             //MainPage = new CustomRendererPage();
-            MainPage = new CameraPage();
-            //MainPage = new 
+            // MainPage = new CameraPage();
+            MainPage = new PhoneCallPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
