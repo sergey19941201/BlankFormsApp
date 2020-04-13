@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankFormsApp.Pages.FlexLayoutPage">
+    <ContentPage.Content>
+        <FlexLayout Direction="Row" 
+                    Wrap="Wrap">
+            <Button BackgroundColor="SeaGreen" Text="Item 1" />
+            <Button BackgroundColor="LightBlue" Text="Item 2" />
+            <Button BackgroundColor="LightPink" Text="Item 3" />
+            <Button BackgroundColor="LightGreen" Text="Item 4" />
+            <Button BackgroundColor="LightCoral" Text="Item 5" />
+            <Button BackgroundColor="LightSalmon" Text="Item 6" />
+            <Button BackgroundColor="LightSteelBlue" Text="Item 7" />
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

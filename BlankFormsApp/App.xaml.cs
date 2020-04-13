@@ -83,9 +83,9 @@ namespace BlankFormsApp
             //MainPage = new CustomRendererPage();
             // MainPage = new CameraPage();
             // MainPage = new PhoneCallPage();
-            MainPage = new AnimationEyeTrainingPage();
-            //MainPage = new 
-            //MainPage = new 
+            //MainPage = new AnimationEyeTrainingPage();
+            //MainPage = new FlexLayoutPage();
+            MainPage = new FlexLayoutAlignmentPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BlankFormsApp.Pages.FlexLayoutAlignmentPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>
+                <Thickness Top="20" />
+            </OnPlatform.iOS>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Resources>
+        <Style x:Key="btnStyle" TargetType="Button">
+            <Setter Property="WidthRequest" Value="120" />
+            <Setter Property="HeightRequest" Value="100" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <FlexLayout Direction="Column"
+                    BackgroundColor="Black">
+            <FlexLayout Direction="Row" 
+                        FlexLayout.Basis="25%">
+                <Button BackgroundColor="SeaGreen" 
+                        Text="Item 11" 
+                        FlexLayout.Basis="25%"
+                        Style="{StaticResource Key=btnStyle}" />
+                <BoxView BackgroundColor="Red" 
+                         FlexLayout.Grow="1.5"/>
+                <Button BackgroundColor="LightGreen" 
+                        Text="Item 14" 
+                        FlexLayout.Basis="25%"
+                        Style="{StaticResource Key=btnStyle}" />
+            </FlexLayout>
+            <BoxView BackgroundColor="Blue" 
+                     FlexLayout.Grow="1.5"/>
+            <Button BackgroundColor="LightPink" 
+                    Text="Center" 
+                    WidthRequest="100" 
+                    HeightRequest="100" 
+                    FlexLayout.AlignSelf="Center" />
+            <BoxView BackgroundColor="Blue" 
+                     FlexLayout.Grow="1.5"/>
+            <FlexLayout Direction="Row" 
+                        AlignItems="End"
+                        FlexLayout.Basis="25%">
+                <Button BackgroundColor="SeaGreen" 
+                        Text="Item 11" 
+                        FlexLayout.Basis="25%"
+                        Style="{StaticResource Key=btnStyle}" />
+                <BoxView BackgroundColor="Red" 
+                         FlexLayout.Grow="1.5"/>
+                <Button BackgroundColor="LightGreen" 
+                        Text="Item 14" 
+                        FlexLayout.Basis="25%"
+                        Style="{StaticResource Key=btnStyle}" />
+            </FlexLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
