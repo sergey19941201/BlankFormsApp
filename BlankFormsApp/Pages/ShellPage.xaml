@@ -2,11 +2,9 @@
 
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-       mc:Ignorable="d"
        x:Class="BlankFormsApp.Pages.ShellPage">
-        <FlyoutItem Title="Европа">
+        <FlyoutItem Title="Европа" 
+                    FlyoutIcon="gorilla.png">
         <Tab Title="Западная">
             <ShellContent Title="Франция">
                 <ContentPage Title="Франция">
@@ -41,7 +39,8 @@
         </Tab>
     </FlyoutItem>
      
-    <FlyoutItem Title="Азия">
+    <FlyoutItem Title="Азия" 
+                Icon="gorilla.png">
         <Tab Title="Ближний Восток">
             <ShellContent Title="Турция">
                 <ContentPage Title="Турция">
