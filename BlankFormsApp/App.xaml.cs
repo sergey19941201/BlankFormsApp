@@ -85,8 +85,8 @@ namespace BlankFormsApp
             // MainPage = new PhoneCallPage();
             //MainPage = new AnimationEyeTrainingPage();
             //MainPage = new FlexLayoutPage();
-            MainPage = new FlexLayoutAlignmentPage();
-            //MainPage = new 
+            //MainPage = new FlexLayoutAlignmentPage();
+            MainPage = new ShellPage();
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
