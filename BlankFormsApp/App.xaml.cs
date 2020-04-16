@@ -86,8 +86,8 @@ namespace BlankFormsApp
             //MainPage = new AnimationEyeTrainingPage();
             //MainPage = new FlexLayoutPage();
             //MainPage = new FlexLayoutAlignmentPage();
-            MainPage = new ShellPage();
-            //MainPage = new 
+            //MainPage = new ShellPage();
+            MainPage = new CollectionViewPage(); 
             //MainPage = new 
             //MainPage = new 
             //MainPage = new 
