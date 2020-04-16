@@ -3,9 +3,9 @@ using System.Reflection;
 
 namespace BlankFormsApp.Cells
 {
-    public class CustomCollectionViewDataTemplate : Grid
+    public class CustomCollectionViewDataTemplateFromCode : Grid
     {
-        public  CustomCollectionViewDataTemplate ()
+        public  CustomCollectionViewDataTemplateFromCode ()
         {
             Padding = 10;
             RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
