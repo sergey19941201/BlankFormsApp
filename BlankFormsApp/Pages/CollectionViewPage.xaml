@@ -2,6 +2,7 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cells="clr-namespace:BlankFormsApp.Cells;assembly=BlankFormsApp"
              x:Class="BlankFormsApp.Pages.CollectionViewPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -10,6 +11,21 @@
             </OnPlatform.iOS>
         </OnPlatform>
     </ContentPage.Padding>
-    <CollectionView x:Name="CollectionV" ItemsSource="{Binding CollectionSource}">
-    </CollectionView>
+    <RefreshView>
+        <CollectionView
+            x:Name="CollectionV"
+            EmptyView="No data"
+            ItemsSource="{Binding CollectionSource}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="3" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <cells:CustomCollectionViewDataTemplate />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
 </ContentPage>
